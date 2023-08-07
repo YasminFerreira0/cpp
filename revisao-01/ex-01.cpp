@@ -1,4 +1,11 @@
+/*Faça um programa para ler o tempo de serviço e o salário de um
+funcionário e, em seguida, calcular e mostrar um reajuste salarial
+de acordo com a seguinte situação: se o funcionário possui
+tempo de serviço inferior a 10 anos, o reajuste será de 8%, caso
+contrário, o reajuste salarial será de 10%.*/
+
 #include <iostream>
+#include <iomanip>
 using namespace std;
 int main ()
 {
@@ -17,7 +24,7 @@ int main ()
         reajuste = salario * 1.10;
     }
 
-    cout<<"O reajuste salarial e: "<<reajuste<<endl;
+    cout<<"\nValor do Salario Reajustado R$: "<<fixed<<setprecision(2)<<reajuste<<endl;
 
     return 0;
 }

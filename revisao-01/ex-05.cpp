@@ -1,4 +1,21 @@
+/*Uma loja de materiais de construção pretende promover uma
+liquidação de seu estoque com descontos variáveis de acordo
+com o produto. Para isto, a loja necessita de um programa para
+ler o código e o valor do produto e, em seguida, calcular e
+mostrar o valor do produto com o devido desconto, conforme
+apresenta a tabela abaixo. Dessa forma, faça o programa que
+atenda a necessidade da loja. (Obs: usar a estrutura Switch)
+
+    Código do Produto Desconto (%)
+    1001        22%
+    1254        30%
+    1548        32%
+    1687        37%
+    1923        40%
+*/
+
 #include <iostream>
+#include <iomanip>
 using namespace std;
 int main ()
 {

@@ -1,3 +1,13 @@
+/*Faça um programa para ler um valor real representando a nota
+de um aluno e, em seguida, classificar com os conceitos Bom,
+Regular ou Ruim.
+
+    Nota Conceito
+    de 8,0 à 10,0       Bom
+    de 5,0 à 7,9        Regular
+    de 0,0 à 4,9        Ruim
+*/
+
 #include <iostream>
 using namespace std;
 int main ()

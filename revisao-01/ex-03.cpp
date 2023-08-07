@@ -1,3 +1,10 @@
+/*Faça um programa que leia o valor do salário de uma pessoa e
+o valor de um financiamento pretendido. Caso o valor do
+financiamento seja inferior ou igual a 30% do valor do salário da
+pessoa, o programa deverá escrever “Financiamento
+Concedido”, caso contrário ele deverá escrever “Financiamento
+Negado”.*/
+
 #include <iostream>
 using namespace std;
 int main ()
