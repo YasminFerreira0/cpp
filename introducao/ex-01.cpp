@@ -1,3 +1,8 @@
+/*Faça um programa para ler um valor representando horas, um
+valor representado minutos e um valor representando segundos
+e, em seguida, calcular e mostrar quantos segundos se passou
+desde o início do dia.*/
+
 #include <iostream>
 using namespace std;
 int main ()
