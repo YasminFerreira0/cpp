@@ -1,3 +1,4 @@
+/*Comparação de strings*/
 #include <iostream>
 #include <cstring>
 #include <cstdio>

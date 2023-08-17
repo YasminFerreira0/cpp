@@ -1,3 +1,4 @@
+/*Tamanho de uma string*/
 #include <iostream>
 #include <cstring>
 using namespace std;

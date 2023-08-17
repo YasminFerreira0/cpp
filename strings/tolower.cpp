@@ -1,3 +1,4 @@
+/*Conversão para minúsculo*/
 #include <iostream>
 #include <string.h>
 using namespace std;

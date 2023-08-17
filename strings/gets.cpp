@@ -1,3 +1,4 @@
+/*Leitura de uma string*/
 #include <iostream>
 #include <cstdio>
 
