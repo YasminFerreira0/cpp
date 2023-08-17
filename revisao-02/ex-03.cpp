@@ -1,3 +1,7 @@
+/*Faça um programa para ler as notas (n1, n2, n3) de cada aluno de
+uma turma de 10 alunos e, em seguida, calcular e mostrar a media
+de cada aluno. No final deve ser mostrada também a média da
+turma.*/
 #include <iostream>
 using namespace std;
 

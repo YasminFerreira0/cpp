@@ -1,3 +1,7 @@
+/*Faça um programa para ler 10 números inteiros aleatórios e
+calcular e mostrar o produto dos números ímpares e a soma dos
+números pares.*/
+
 #include <iostream>
 using namespace std;
 

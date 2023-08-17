@@ -1,3 +1,7 @@
+/*Faça um programa para ler o peso de várias pessoas e calcular e
+mostrar no final o maior peso. O programa deverá encerrar
+quando for informado um peso igual zero.*/
+
 #include <iostream>
 using namespace std;
 
