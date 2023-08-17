@@ -1,3 +1,8 @@
+/*Faça um programa para ler um vetor de 10 números reais, calcular
+e mostrar a média dos números do vetor e, em seguida, calcular e
+mostrar a quantidade de números menores que a média e a
+quantidade de números maiores ou iguais à média.*/
+
 #include <iostream>
 using namespace std;
 
@@ -10,7 +15,6 @@ int main ()
     maiorIgual = 0;
 
     cout<<"Informe os valores do vetor."<<endl;
-
     for (i=0; i<10; i++){
         cin>>vet[i];
         soma += vet[i];

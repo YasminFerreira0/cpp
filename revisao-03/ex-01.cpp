@@ -1,3 +1,7 @@
+/*Faça um programa para ler um vetor de 10 números inteiros e, em
+seguida, inverter a ordem dos números no vetor e mostrá-los no
+final.*/
+
 #include <iostream>
 using namespace std;
 
