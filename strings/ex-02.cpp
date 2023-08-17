@@ -1,3 +1,9 @@
+/*Faça um programa para concatenar duas strings lidas do usuário. A segunda string
+deverá ser concatenada na primeira.
+    Exemplo: string1: sol string2: lua
+    após concatenar string1: sollua string2: lua
+*/
+
 #include <iostream>
 #include <cstring>
 using namespace std;
@@ -11,7 +17,7 @@ int main()
     gets(str2);
 
     strcat(str1,str2);
-    cout<<str1;
-    cout<<str2;
+    cout<<"String1: "<<str1<<endl;
+    cout<<"String21: "<<str2<<endl;
     return 0;
 }
