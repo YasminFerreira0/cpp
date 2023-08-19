@@ -5,7 +5,9 @@ deverá ser concatenada na primeira.
 */
 
 #include <iostream>
+#include <cstdio>
 #include <cstring>
+
 using namespace std;
 int main()
 {
@@ -13,11 +15,13 @@ int main()
     cout<<"Informe a primeira string: ";
     gets(str1);
 
-    cout<<"Informe a segunda string: ";
+    cout<<"Informe a segunda string: "<<endl<<endl;
     gets(str2);
 
     strcat(str1,str2);
-    cout<<"String1: "<<str1<<endl;
-    cout<<"String21: "<<str2<<endl;
+
+    cout<<"String concatenada: ";
+    cout<<str1<<endl;
+
     return 0;
 }

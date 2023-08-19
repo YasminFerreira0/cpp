@@ -2,18 +2,20 @@
 minúsculo.*/
 
 #include <iostream>
-#include <string.h>
+#include <cstdio>
+#include <cstring>
+
 using namespace std;
 
 int main ()
 {
-    char str[50];
+    char frase[50];
 
     cout<<"Digite uma frase em maiusculo: ";
-    gets(str);
+    gets(frase);
 
-    strlwr(str);
-    cout<<str;
+    strlwr(frase);
+    cout<<frase;
     
     return 0;
 }

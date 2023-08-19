@@ -1,9 +1,9 @@
 /*Faça um programa para ler uma frase e determinar quantas vezes um determinado
 caractere aparece na frase. Esse caractere deve ser informado pelo usuário.*/
+
 #include <iostream>
-#include <cstring>
 #include <cstdio>
-#include <string.h>
+#include <cstring>
 
 using namespace std;
 int main()
@@ -27,5 +27,5 @@ int main()
 
     cout<<"O caracter aparece "<<cont<<" vezes na fraze."<<endl;
 
-
+    return 0;
 }
