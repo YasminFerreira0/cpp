@@ -1,4 +1,7 @@
-/**/
+/*Uma palavra é um palíndromo quando é a mesma lida da esquerda para a direita ou
+vice-versa. Por exemplo, a palavra ANILINA é um palíndromo, já a palavra AMOR
+não é. Faça um programa que leia uma palavra de no máximo 15 letras e mostre se ela é
+um palíndromo ou não.*/
 
 #include <iostream>
 #include <cstdio>
