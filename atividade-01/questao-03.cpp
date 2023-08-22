@@ -14,20 +14,37 @@ using namespace std;
 int main ()
 {
     char frase[50];
-    char palavra[50];
+    char palavra[50][50];
     char frase_inv[100];
-    int i;
+    int i, j, k;
+
+    i=0;
+    j=0;
+    k=0;
 
     cout<<"Informe uma frase: ";
     gets(frase);
 
-    for(i=0; i<strlen(frase)-1; i++){
-        while (frase[i] != ' ')
-        {
-            palavra[i] = frase[i];
+    while (frase[i] != '\0') {
+        if (frase[i] != ' ') {
+            palavra[j][k++] = frase[i];
+        } else {
+            palavra[j][k] = '\0';
+            j++;
+            k = 0;
         }
-        palavra[i]= ' ';
+        i++;
+    }
+    palavra[j][k] = '\0';
+
+    for (int p = j; p >= 0; p--) {
+        cout << palavra[p];
+        if (p > 0) {
+            cout << " ";
+        }
     }
 
-    cout<<frase;
+    cout << endl;
+
+    return 0;
 }
