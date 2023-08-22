@@ -29,13 +29,13 @@ int main ()
         if (frase[i] != ' ') {
             palavra[j][k++] = frase[i];
         } else {
-            palavra[j][k] = '\0';
-            j++;
-            k = 0;
+            palavra[j][k] = '\0';  // Adicionar caractere nulo para finalizar a palavra
+            j++;  // Próxima palavra
+            k = 0;  // Reiniciar o índice da palavra atual
         }
         i++;
     }
-    palavra[j][k] = '\0';
+    palavra[j][k] = '\0';  // Finalizar a última palavra
 
     for (int p = j; p >= 0; p--) {
         cout << palavra[p];
