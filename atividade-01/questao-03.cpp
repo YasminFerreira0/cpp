@@ -31,13 +31,13 @@ int main ()
         if (frase[i] != ' ') {
             palavra[j][k++] = frase[i];
         } else {
-            palavra[j][k] = '\0';  // Adicionar caractere nulo para finalizar a palavra
-            j++;  // Próxima palavra
-            k = 0;  // Reiniciar o índice da palavra atual
+            palavra[j][k] = '\0';
+            j++;  
+            k = 0;  
         }
         i++;
     }
-    palavra[j][k] = '\0';  // Finalizar a última palavra
+    palavra[j][k] = '\0'; 
 
     cout<<"Frase com as palavras na ordem inversa: "<<endl;
 
