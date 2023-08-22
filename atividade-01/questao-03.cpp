@@ -15,15 +15,17 @@ int main ()
 {
     char frase[50];
     char palavra[50][50];
-    char frase_inv[100];
-    int i, j, k;
+    int i, j, k, l;
 
     i=0;
     j=0;
     k=0;
+    l=0;
 
     cout<<"Informe uma frase: ";
     gets(frase);
+
+    cout<<endl<<endl;
 
     while (frase[i] != '\0') {
         if (frase[i] != ' ') {
@@ -37,14 +39,15 @@ int main ()
     }
     palavra[j][k] = '\0';  // Finalizar a última palavra
 
-    for (int p = j; p >= 0; p--) {
-        cout << palavra[p];
-        if (p > 0) {
+    cout<<"Frase com as palavras na ordem inversa: "<<endl;
+
+    for (l = j; l >= 0; l--) {
+        cout << palavra[l];
+        if (l > 0) {
             cout << " ";
         }
     }
-
-    cout << endl;
+    cout<<endl<<endl;
 
     return 0;
 }
