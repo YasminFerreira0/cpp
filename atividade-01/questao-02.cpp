@@ -23,25 +23,27 @@ int main()
     gets(frase);
 
     for(i=0; i<strlen(frase)-1; i++){
-        switch (frase[i]){
-            case 'a':
-                v_a ++;
-            break;
-            case 'e':
+        if(frase[i] == 'a' || frase[i]=='A'){
+            v_a ++;
+        }else{
+            if(frase[i] == 'e' || frase[i]=='E'){
                 v_e ++;
-            break;
-            case 'i':
-                v_i ++;
-            break;
-            case 'o':
-                v_o ++;
-            break;
-            case 'u':
-                v_u ++;
-            break;
-            default:
-            break;
-        } 
+            }else{
+                if(frase[i] == 'i' || frase[i]=='I'){
+                    v_i ++;
+                }else{
+                    if(frase[i] == 'o' || frase[i]=='O'){
+                        v_o ++;
+                    }else{
+                        if (frase[i]=='u'|| frase[i]=='U')
+                        {
+                            v_u ++;
+                        }
+                        
+                    }
+                }
+            }
+        }
     }
         
     cout<<"Numero de vogais."<<endl;
