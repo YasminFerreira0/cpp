@@ -1,7 +1,7 @@
-/*Faça um programa para cadastrar até 50 imóveis a serem alugados ou vendidos,
-contendo os seguintes dados: tipo (loja, apartamento, casa, quitinete), endereço, bairro,
-valor, situação (aluguel ou venda). Ao final, solicitar ao usuário a situação a ser
-pesquisada e mostrar todos os dados dos imóveis enquadrados na solicitação.*/
+/*Faca um programa para cadastrar ate 50 imoveis a serem alugados ou vendidos,
+contendo os seguintes dados: tipo (loja, apartamento, casa, quitinete), endereco, bairro,
+valor, situacao (aluguel ou venda). Ao final, solicitar ao usuario a situacao a ser
+pesquisada e mostrar todos os dados dos imoveis enquadrados na solicitacao.*/
 
 #include <iostream>
 #include <cstdio>
@@ -19,7 +19,7 @@ int main(){
     int i;
 
     for (i=0; i<50; i++){
-        cout<<"Informe os dados do imovel."<<endl<<endl;
+        cout<<"Informe os dados do imovel."<<endl;
         cout<<"Informe o tipo do imovel: ";
         gets(imoveis[i].tipo);
         cout<<"Informe o endereco do imovel: ";
@@ -27,18 +27,25 @@ int main(){
         cout<<"Informe o bairro do imovel: ";
         gets(imoveis[i].bairro);
         cout<<"Informe o valor do imovel: ";
-        gets(imoveis[i].valor);
-        cout<<"Informe a situacao do imovel (A para aluguel ou v para venda): ";
-        gets(imoveis[i].situacao);
+        cin>>imoveis[i].valor;
+        cout<<"Informe a situacao do imovel (A para aluguel ou V para venda): ";
+        cin>>imoveis[i].situacao;
+        cout<<endl;
     }
 
     cout<<"Informe a situacao do imovel que esta procurando (A para aluguel e V para venda).";
-    gets(pesquisa);
+    cin>>pesquisa;
 
     for (i=0; i<50; i++){
-        if(pesquisa == ){
-            cout<<
+        if(pesquisa == imoveis[i].situacao){
+            cout<<"Imovel."<<endl;
+            cout<<"Tipo: "<<imoveis[i].tipo<<endl;
+            cout<<"Endereco: "<<imoveis[i].endereco<<endl;
+            cout<<"Bairro: "<<imoveis[i].bairro<<endl;
+            cout<<"Valor: "<<imoveis[i].valor<<endl;
+            cout<<endl<<endl;
         }
     }
 
+    return 0;
 }
