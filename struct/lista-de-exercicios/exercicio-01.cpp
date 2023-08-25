@@ -5,6 +5,7 @@ pesquisada e mostrar todos os dados dos imoveis enquadrados na solicitacao.*/
 
 #include <iostream>
 #include <cstdio>
+#include <cstring>
 using namespace std;
 struct cadastro{
     char tipo[50];
@@ -16,16 +17,20 @@ struct cadastro{
 int main(){
     cadastro imoveis[50];
     char pesquisa;
-    int i;
+    int i, cont;
 
-    for (i=0; i<50; i++){
-        cout<<"Informe os dados do imovel."<<endl;
-        cout<<"Informe o tipo do imovel: ";
-        gets(imoveis[i].tipo);
+
+    cout<<"Quantos imoveis deseja cadastrar? (maximo 50): ";
+    cin>>cont;
+
+    for (i=0; i<cont; i++){
+        cout<<"Informe os dados do imovel " << i + 1 << ":"<<endl;
+        cout<<"\nInforme o tipo do imovel: ";
+        cin>>imoveis[i].tipo;
         cout<<"Informe o endereco do imovel: ";
-        gets(imoveis[i].endereco);
+        cin>>imoveis[i].endereco;
         cout<<"Informe o bairro do imovel: ";
-        gets(imoveis[i].bairro);
+        cin>>imoveis[i].bairro;
         cout<<"Informe o valor do imovel: ";
         cin>>imoveis[i].valor;
         cout<<"Informe a situacao do imovel (A para aluguel ou V para venda): ";
@@ -33,10 +38,13 @@ int main(){
         cout<<endl;
     }
 
-    cout<<"Informe a situacao do imovel que esta procurando (A para aluguel e V para venda).";
+    cout<<"Informe a situacao do imovel que esta procurando (A para aluguel e V para venda): ";
     cin>>pesquisa;
 
-    for (i=0; i<50; i++){
+    cout<<endl;
+
+    cout << "Imoveis encontrados:" <<endl;
+    for (i=0; i<cont; i++){
         if(pesquisa == imoveis[i].situacao){
             cout<<"Imovel."<<endl;
             cout<<"Tipo: "<<imoveis[i].tipo<<endl;
