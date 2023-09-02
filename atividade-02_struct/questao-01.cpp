@@ -1,9 +1,9 @@
 /*A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados
-sobre o sal·rio, idade, sexo e n˙mero de filhos. Utilizando Struct, crie um programa que
+sobre o sal√°rio, idade, sexo e n√∫mero de filhos. Utilizando Struct, crie um programa que
 leia os dados de 10 pessoas e, ao final, mostre:
-    a) A mÈdia de sal·rio das mulheres;
-    b) A mÈdia de sal·rio dos homens;
-    c) A mÈdia do n˙mero de filhos;
+    a) A m√©dia de sal√°rio das mulheres;
+    b) A m√©dia de sal√°rio dos homens;
+    c) A m√©dia do n√∫mero de filhos;
 */
 
 #include <iostream>
@@ -21,11 +21,12 @@ struct dados {
 
 int main (){
     dados pessoa[10];
-    int i;
+    int i, contF = 0, contM = 0;
+    float somaM = 0, somaF = 0, somaFilho = 0, mediaFilho = 0, mediaM = 0, mediaF = 0; 
 
     cout<<"informe os dados da pesquisa."<<endl;
     for (i=0; i<10; i++){
-        cout<<"pessoa ", i+1;
+        cout<<"pessoa "<<i+1<<endl;
 
         cout<<"Informe o Salario: ";
         cin>>pessoa[i].salario;
@@ -37,9 +38,33 @@ int main (){
         fflush(stdin);
         gets(pessoa[i].sexo);
 
+        cout<<"Informe o numero de filhos: ";
+        cin>>pessoa[i].filhos;
+
         cout<<endl<<endl;
     }
 
+    for(i=0; i<10; i++){
+        somaFilho = somaFilho + pessoa[i].filhos;
 
+        if(pessoa[i].sexo == "feminino"){
+            contF ++;
+            somaF = somaF + pessoa[i].salario;
+        }
+        if(pessoa[i].sexo == "masculino"){
+            contM ++;
+            somaM = somaM + pessoa[i].salario;
+        }
+    }
 
+    mediaF = somaF / contF;
+    mediaM = somaM / contM;
+    mediaFilho = mediaFilho / 10;
+
+    cout<<"A media de salario das mulheres e: "<<mediaF<<endl;
+    cout<<"A media de salario dos homens e: "<<mediaM<<endl;
+    cout<<"A media do numero de filhos e: "<<mediaFilho<<endl;
+    
+
+    return 0;
 }
