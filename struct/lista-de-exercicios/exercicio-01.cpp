@@ -6,49 +6,68 @@ pesquisada e mostrar todos os dados dos imoveis enquadrados na solicitacao.*/
 #include <iostream>
 #include <cstdio>
 #include <cstring>
+
+
+#include <stdio.h>
+#include <string.h>
+
 using namespace std;
 struct cadastro{
     char tipo[50];
-    char endereco[50];
+    char ende[50];
     char bairro[50];
     float valor;
-    char situacao;
+    char sit[15];
 };
 int main(){
     cadastro imoveis[50];
-    char pesquisa;
+    char pes[15];
     int i, cont;
 
-
-    cout<<"Quantos imoveis deseja cadastrar? (maximo 50): ";
-    cin>>cont;
+    do{
+        cout<<"Quantos imoveis deseja cadastrar? (maximo 50): ";
+        cin>>cont;
+        if(cont < 1 || cont > 50)
+            cout<<"\nValor incorreto! Informe um valor no intervalo de 1 a 50\n";
+    }while(cont < 1 || cont > 50);
 
     for (i=0; i<cont; i++){
         cout<<"Informe os dados do imovel " << i + 1 << ":"<<endl;
+
         cout<<"\nInforme o tipo do imovel: ";
-        cin>>imoveis[i].tipo;
+        fflush(stdin);
+        gets(imoveis[i].tipo);
+
         cout<<"Informe o endereco do imovel: ";
-        cin>>imoveis[i].endereco;
+        fflush(stdin);
+        gets(imoveis[i].ende);
+
         cout<<"Informe o bairro do imovel: ";
-        cin>>imoveis[i].bairro;
+        fflush(stdin);
+        gets(imoveis[i].bairro);
+
         cout<<"Informe o valor do imovel: ";
         cin>>imoveis[i].valor;
+
         cout<<"Informe a situacao do imovel (A para aluguel ou V para venda): ";
-        cin>>imoveis[i].situacao;
+        fflush(stdin);
+        gets(imoveis[i].sit);
+
         cout<<endl;
     }
 
-    cout<<"Informe a situacao do imovel que esta procurando (A para aluguel e V para venda): ";
-    cin>>pesquisa;
+    cout<<"Informe a situacao do imovel que esta procurando: ";
+    fflush(stdin);
+    gets(pes);
 
     cout<<endl;
 
     cout << "Imoveis encontrados:" <<endl;
     for (i=0; i<cont; i++){
-        if(pesquisa == imoveis[i].situacao){
+        if(strcmpi(imoveis[i].sit, pes) == 0 ){
             cout<<"Imovel."<<endl;
             cout<<"Tipo: "<<imoveis[i].tipo<<endl;
-            cout<<"Endereco: "<<imoveis[i].endereco<<endl;
+            cout<<"Endereco: "<<imoveis[i].ende<<endl;
             cout<<"Bairro: "<<imoveis[i].bairro<<endl;
             cout<<"Valor: "<<imoveis[i].valor<<endl;
             cout<<endl<<endl;

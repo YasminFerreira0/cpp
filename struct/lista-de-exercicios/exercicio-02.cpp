@@ -6,59 +6,80 @@ e com SALÁRIO acima de R$ 1.500,00. Cadastrar no máximo 200 funcionários.*/
 #include <iostream>
 #include <cstring>
 
+#include <stdio.h>
+#include <string.h>
+
 using namespace std;
 
 struct dados
 {
     char nome[50];
-    float salario;
-    char est_civil[20];
-    char sexo;
-    int n_dependentes;
-    char cidade[50];
-    char estado[3];
+    float sal;
+    char ec[20];
+    char sexo[15];
+    int nd;
+    char cid[50];
+    char uf[3];
 };
 
 int main(){
     dados func[200];
     int i, cont;
 
-    cout<<"Quantos funcionarios deseja cadastrar? (maximo 200): ";
-    cin>>cont;
+    do{
+        cout<<"Quantos funcionarios deseja cadastrar? (maximo 200): ";
+        cin>>cont;
+        if(cont < 1 || cont > 200)
+            cout<<"\nValor incorreto! Informe um valor no intervalo de 1 a 200\n";
+    }while(cont < 1 || cont > 200);
 
     cout<<"Informe os dados dos funcionarios"<<endl;
 
     for (i=0; i<cont; i++){
         cout<<"Funcionario "<<i +1<<": "<<endl;
         cout<<"Nome: ";
-        cin>>func[i].nome;
+        fflush(stdin);
+        gets(func[i].nome);
+
         cout<<"Salario: ";
-        cin>>func[i].salario;
+        cin>>func[i].sal;
+
         cout<<"Estado Civil: ";
-        cin>>func[i].est_civil;
+        fflush(stdin);
+        gets(func[i].ec);
+
         cout<<"Sexo (M, F): ";
-        cin>>func[i].sexo;
+        fflush(stdin);
+        gets(func[i].sexo);
+
         cout<<"Numero de dependencias: ";
-        cin>>func[i].n_dependentes;
+        cin>>func[i].nd;
+
         cout<<"Cidade: ";
-        cin>>func[i].cidade;
+        fflush(stdin);
+        gets(func[i].cid);
+
         cout<<"Estado: ";
-        cin>>func[i].estado;
+        fflush(stdin);
+        gets(func[i].uf);
+
         cout<<endl<<endl;
     }
 
     cout<<"funcionarios(as) CASADOS(AS), residentes no RS e com salario acima de R$ 1.500,00."<<endl;
 
     for(i=0; i<cont; i++){
-        if(strcmp(func[i].est_civil, "casado") == 0 && strcmp(func[i].estado, "RS") == 0 && func[i].salario > 1500){
+        if(strcmp(func[i].ec, "casado") == 0 && strcmp(func[i].uf, "RS") == 0 && func[i].sal > 1500){
             cout<<"Funcionario"<<endl;
+
             cout<<"Nome: "<<func[i].nome<<endl;
-            cout<<"Salario: "<<func[i].salario<<endl;
-            cout<<"Estado Civil: "<<func[i].est_civil<<endl;
+            cout<<"Salario: "<<func[i].sal<<endl;
+            cout<<"Estado Civil: "<<func[i].ec<<endl;
             cout<<"Sexo (M, F): "<<func[i].sexo<<endl;
-            cout<<"Numero de dependencias: "<<func[i].n_dependentes<<endl;
-            cout<<"Cidade: "<<func[i].cidade<<endl;
-            cout<<"Estado: "<<func[i].estado<<endl;
+            cout<<"Numero de dependencias: "<<func[i].nd<<endl;
+            cout<<"Cidade: "<<func[i].cid<<endl;
+            cout<<"Estado: "<<func[i].uf<<endl;
+
             cout<<endl;
         }
     }

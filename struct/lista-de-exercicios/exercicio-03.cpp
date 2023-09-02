@@ -6,48 +6,64 @@ compra.*/
 #include <iostream>
 #include <cstring>
 
+#include <stdio.h>
+#include <string.h>
+
 using namespace std;
 
 struct cadastro {
     int codigo;
-    char descricao[100];
+    char descricao[30];
     int est_min;
     int est_atual;
     float preco;
 };
 
 int main(){
-    cadastro produto[20];
+    cadastro prod[20];
     int i, cont;
 
-    cout<<"Quantos produtos deseja cadastrar? (maximo 20): ";
-    cin>>cont;
+    do{
+        cout<<"Quantos produtos deseja cadastrar? (maximo 20): ";
+        cin>>cont;
+
+        if(cont < 1 || cont > 20)
+            cout<<"\nValor incorreto! Informe um valor no intervalo de 1 a 20\n";
+    }while(cont < 1 || cont > 20);
+
+
 
     cout<<"Informe os dados dos produtos."<<endl;
     for(i=0; i<cont; i++){
         cout<<"Produto "<<i+1<<": "<<endl;
         cout<<"Codigo: ";
-        cin>>produto[i].codigo;
+        cin>>prod[i].codigo;
+
         cout<<"Descricao: ";
-        cin>>produto[i].descricao;
+        fflush(stdin);
+        gets(prod[i].descricao);
+
         cout<<"Estoque minimo: ";
-        cin>>produto[i].est_min;
+        cin>>prod[i].est_min;
+
         cout<<"Estoque atual: ";
-        cin>>produto[i].est_atual;
+        cin>>prod[i].est_atual;
+
         cout<<"preco: ";
-        cin>>produto[i].preco;
+        cin>>prod[i].preco;
     }
 
     cout<<"Produtos com estoque menor que o estoque minimo"<<endl;
 
     for (i=0; i<cont; i++){
-        if(produto[i].est_atual < produto[i].est_min){
+        if(prod[i].est_atual < prod[i].est_min){
             cout<<"Efetuar compra do produto"<<endl;
-            cout<<"Codigo: "<<produto[i].codigo;
-            cout<<"Descricao: "<<produto[i].descricao;
-            cout<<"Estoque minimo: "<<produto[i].est_min;
-            cout<<"Estoque atual: "<<produto[i].est_atual;
-            cout<<"preco: "<<produto[i].preco;
+            cout<<"Codigo: "<<prod[i].codigo;
+            cout<<"Descricao: "<<prod[i].descricao;
+            cout<<"Estoque minimo: "<<prod[i].est_min;
+            cout<<"Estoque atual: "<<prod[i].est_atual;
+            cout<<"preco: "<<prod[i].preco;
+
             cout<<endl<<endl;
         }
     }
