@@ -23,7 +23,7 @@ struct dados{
 
 int main (){
     dados artes[100];
-    int i, cont, consul;
+    int i, cont, consul, obraEncontrada;
 
     do{
         cout<<"Informe a quantidade de obras que deseja cadastrar (1-100): ";
@@ -33,6 +33,8 @@ int main (){
             cout<<"\nValor incorreto! Informe um valor no intervalo de 1 a 100\n";
         }
     }while(cont < 1 || cont >100);
+
+    cout<<endl<<endl;
 
     cout<<"Informe os dados das Obras."<<endl;
 
@@ -53,21 +55,32 @@ int main (){
         fflush(stdin);
         gets(artes[i].autor);
 
+        cout<<endl<<endl;
     }
 
     do{
         cout<<"Informe o codigo da obra q deseja consultar ou digite 1 para sair: ";
         cin>>consul;
 
-        for(i=0; i<cont; i++){
-            if(consul == artes[i].codigo){
-                cout<<"Doado: "<<artes[i].doacao<<endl;
+        if(consul != 1){
+            obraEncontrada = -1;
+            for(i=0; i<cont; i++){
+                if(consul == artes[i].codigo){
+                    obraEncontrada = i;
+                }
+            } 
 
-                cout<<"Nome da obra: "<<artes[i].nome<<endl;
+            if (obraEncontrada != -1) {
+                cout<<"Doado: "<<artes[obraEncontrada].doacao<<endl;
+                cout<<"Nome da obra: "<<artes[obraEncontrada].nome<<endl;
+                cout<<"Autor: "<<artes[obraEncontrada].autor<<endl;
 
-                cout<<"Autor: "<<artes[i].autor<<endl;
+                cout<<endl<<endl;
+            }else {
+                cout<<"Obra nao encontrada."<<endl;
             }
         }
+
     }while (consul != 1);
-    
+
 }
