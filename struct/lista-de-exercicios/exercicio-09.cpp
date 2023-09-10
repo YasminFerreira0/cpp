@@ -1,9 +1,11 @@
+/*Um provedor de acesso √† Internet mant√©m o seguinte cadastro de clientes: c√≥digo do cliente, email, n√∫mero de horas de acesso. Fa√ßa um programa que calcule e mostre um relat√≥rio contendo o valor a pagar por cada cliente, sabendo-se que as primeiras 20 horas de acesso √© R$35,00 e as horas que excederam tem o custo de R$2,50 por hora.*/
+
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
+
 using namespace std;
 
-//DefiniÁ„o da estrutura
 struct Cliente{
     int codigo, horas;
     char email[30];
@@ -11,10 +13,9 @@ struct Cliente{
 
 int main ()
 {
-    Cliente C[200]; //DeclaraÁ„o do vetor do tipo estrutura
+    Cliente C[200];
     int i, n;
 
-    //Leitura da quantidade de clientes
     do{
         cout<<"\nInforme a quantidade de clientes a serem cadastrados ";
         cin>>n;
@@ -24,7 +25,6 @@ int main ()
 
     }while(n < 1 || n > 200);
 
-    //Leitura dos dados dos clientes a serem cadastrados
     cout<<"\nCadastre os "<<n<<" clientes\n";
     for(i = 0; i < n; i++)
     {
@@ -40,7 +40,6 @@ int main ()
 
     }
 
-    //Calculo e escrita do valor da pagar de cada cliente
     cout<<"\n\nValor a pagar de cada cliente\n";
     for(i = 0; i < n; i++)
     {

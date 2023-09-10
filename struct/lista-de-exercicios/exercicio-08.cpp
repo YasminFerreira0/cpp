@@ -1,15 +1,10 @@
-/*Tendo um registro contendo MatrÌcula do Aluno (MA) do aluno, tipo de participaÁ„o
-(A, B, C ou D) e SÛcio da SBC (S - sim ou N - n„o), faÁa um programa para calcular o
-valor que cada aluno vai pagar para participar da semana de inform·tica, sabendo-se
-que:
-Para os sÛcios da SBC o valor a pagar ter· um desconto de 50%. O programa dever·
-permitir a entrada de v·rios registros (no m·ximo 100) atÈ que uma condiÁ„o de
-finalizaÁ„o seja satisfeita. Calcular e exibir tambÈm o total geral arrecadado com o
-evento e quantos alunos se matricularam em cada um dos tipos de participaÁ„o.*/
+/*Tendo um registro contendo Matr√≠cula do Aluno (MA) do aluno, tipo de participa√ß√£o (A, B, C ou D) e S√≥cio da SBC (S - sim ou N - n√£o), fa√ßa um programa para calcular o valor que cada aluno vai pagar para participar da semana de inform√°tica, sabendo-se que:
+    Para os s√≥cios da SBC o valor a pagar ter√° um desconto de 50%. O programa dever√° permitir a entrada de v√°rios registros (no m√°ximo 100) at√© que uma condi√ß√£o de finaliza√ß√£o seja satisfeita. Calcular e exibir tamb√©m o total geral arrecadado com o evento e quantos alunos se matricularam em cada um dos tipos de participa√ß√£o.*/
 
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
+
 using namespace std;
 
 struct Aluno{

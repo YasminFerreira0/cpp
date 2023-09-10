@@ -4,8 +4,6 @@ uma listagem de todos os dados dos funcionários(as) CASADOS(AS), residentes no 
 e com SALÁRIO acima de R$ 1.500,00. Cadastrar no máximo 200 funcionários.*/
 
 #include <iostream>
-#include <cstring>
-
 #include <stdio.h>
 #include <string.h>
 
@@ -13,13 +11,9 @@ using namespace std;
 
 struct dados
 {
-    char nome[50];
+    char nome[50], ec[20], sexo[15], cid[50], uf[3];
     float sal;
-    char ec[20];
-    char sexo[15];
     int nd;
-    char cid[50];
-    char uf[3];
 };
 
 int main(){

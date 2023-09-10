@@ -1,11 +1,9 @@
-/*Uma pessoa cadastrou um conjunto de 15 registros contendo o nome da loja, telefone e
-preço de um eletrodoméstico. Faça um programa que permita exibir qual foi a média
-dos preços cadastrados e uma relação contendo o nome e o telefone das lojas cujo preço
-estava abaixo da média.*/
+/*Uma pessoa cadastrou um conjunto de 15 registros contendo o nome da loja, telefone e preÃ§o de um eletrodomÃ©stico. FaÃ§a um programa que permita exibir qual foi a mÃ©dia dos preÃ§os cadastrados e uma relaÃ§Ã£o contendo o nome e o telefone das lojas cujo preÃ§o estava abaixo da mÃ©dia.*/
 
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
+
 using namespace std;
 
 struct Loja{
@@ -18,7 +16,7 @@ int main ()
     int i;
     float media = 0;
 
-    cout<<"\nCadastre os dados de "<<TAM<<" lojas\n";
+    cout<<"\nCadastre os dados de "<<15<<" lojas\n";
     for(i = 0; i < 15; i++)
     {
         cout<<"\n\nInforme o nome: ";
@@ -47,6 +45,5 @@ int main ()
 
         }
     }
-
     return 0;
 }

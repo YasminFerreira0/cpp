@@ -1,6 +1,4 @@
-/*Faça um programa para cadastrar o nome do município, seu estado e sua população.
-Mostrar todos os municípios cadastrados do estado de Goiás e os dados do município
-que contém a maior população. Cadastrar até 90 municípios.*/
+/*FaÃ§a um programa para cadastrar o nome do municÃ­pio, seu estado e sua populaÃ§Ã£o. Mostrar todos os municÃ­pios cadastrados do estado de GoiÃ¡s e os dados do municÃ­pio que contÃ©m a maior populaÃ§Ã£o. Cadastrar atÃ© 90 municÃ­pios.*/
 
 #include <iostream>
 #include <stdio.h>

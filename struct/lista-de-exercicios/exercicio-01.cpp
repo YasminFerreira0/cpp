@@ -4,20 +4,14 @@ valor, situacao (aluguel ou venda). Ao final, solicitar ao usuario a situacao a 
 pesquisada e mostrar todos os dados dos imoveis enquadrados na solicitacao.*/
 
 #include <iostream>
-#include <cstdio>
-#include <cstring>
-
-
 #include <stdio.h>
 #include <string.h>
 
 using namespace std;
 struct cadastro{
-    char tipo[50];
-    char ende[50];
-    char bairro[50];
+    char tipo[50], ende[50], bairro[50], sit[15];
     float valor;
-    char sit[15];
+    
 };
 int main(){
     cadastro imoveis[50];

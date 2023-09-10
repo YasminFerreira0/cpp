@@ -1,20 +1,29 @@
+/*Uma determinada biblioteca possui obras de ciências exatas, humanas e biológicas, totalizando 1500 volumes, distribuídos em cada uma das áreas. O proprietário resolveu agrupar as informações de cada livro no seguinte registro:
+    Código de catalogação
+    Doação (S/N)
+    Nome da obra
+    Nome do autor
+    Editora
+Faça um programa que:
+a) cadastre todos os volumes de cada uma das áreas em três vetores distintos.
+b) permita ao usuário fazer consulta às informações cadastradas fornecendo o código de catalogação e a área. Existindo tal livro as informações são exibidas, caso contrário enviar mensagem de aviso. A consulta se repete até que o usuário digite código finalizador = 1.*/
+
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
+
 using namespace std;
 
-//Defini��o da estrutura
 struct Livro{
     int codigo;
     char doacao, obra[50], autor[30], editora[30]; };
 
 int main ()
 {
-    Livro E[500], H[500], B[500]; //Declara��o dos vetores do tipo estrutura
+    Livro E[500], H[500], B[500];
     int qe, qh, qb, i, cod;
     char area[15];
 
-    //Leitura da quantidade de livros de exatas
     do{
         cout<<"\n\nInforme a quantidade de livros de Exatas a serem cadastrados ";
         cin>>qe;
@@ -22,7 +31,6 @@ int main ()
             cout<<"\nValor incorreto! Informe um valor no intervalo de 1 a 500\n";
     }while(qe < 1 || qe > 500);
 
-    //Leitura dos dados dos livros de exatas a serem cadastrados
     cout<<"\nCadastro dos livros de Exatas\n";
     for(i = 0; i < qe; i++)
     {
@@ -45,7 +53,6 @@ int main ()
         gets(E[i].editora);
     }
 
-    //Leitura da quantidade de livros de humanas
     do{
         cout<<"\n\nInforme a quantidade de livros de Humanas a serem cadastrados ";
         cin>>qh;
@@ -53,7 +60,6 @@ int main ()
             cout<<"\nValor incorreto! Informe um valor no intervalo de 1 a 500\n";
     }while(qh < 1 || qh > 500);
 
-    //Leitura dos dados dos livros de humanas a serem cadastrados
     cout<<"\nCadastro dos livros de Humanas\n";
     for(i = 0; i < qh; i++)
     {
@@ -76,7 +82,6 @@ int main ()
         gets(H[i].editora);
     }
 
-    //Leitura da quantidade de livros de biologicas
     do{
         cout<<"\n\nInforme a quantidade de livros de Biologicas a serem cadastrados ";
         cin>>qb;
@@ -84,7 +89,6 @@ int main ()
             cout<<"\nValor incorreto! Informe um valor no intervalo de 1 a 500\n";
     }while(qb < 1 || qb > 500);
 
-    //Leitura dos dados dos livros de biologicas a serem cadastrados
     cout<<"\nCadastro dos livros de Biologicas\n";
     for(i = 0; i < qb; i++)
     {
@@ -107,7 +111,6 @@ int main ()
         gets(B[i].editora);
     }
 
-    //Consulta dos livros informados pelo usu�rio
     do{
         cout<<"\n\n\nInforme o codigo do livro a ser buscado: ";
         cin>>cod;
@@ -120,12 +123,10 @@ int main ()
 
             if(strcmpi(area, "Exatas") == 0)
             {
-                //Localizando o livro da area exatas
                 i = 0;
                 while(i < qe && E[i].codigo != cod)
                     i++;
 
-                //Escrita das informa��es do livro
                 if(i < qe)
                 {
                     cout<<"\n\nNome da obra: "<<E[i].obra;
@@ -141,12 +142,10 @@ int main ()
             {
                 if(strcmpi(area, "Humanas") == 0)
                 {
-                    //Localizando o livro da area humanas
                     i = 0;
                     while(i < qh && H[i].codigo != cod)
                         i++;
 
-                    //Escrita das informa��es do livro
                     if(i < qh)
                     {
                         cout<<"\n\nNome da obra: "<<H[i].obra;
@@ -162,12 +161,10 @@ int main ()
                 {
                     if(strcmpi(area, "Biologicas") == 0)
                     {
-                        //Localizando o livro da area biologicas
                         i = 0;
                         while(i < qb && B[i].codigo != cod)
                             i++;
 
-                        //Escrita das informa��es do livro
                         if(i < qb)
                         {
                             cout<<"\n\nNome da obra: "<<B[i].obra;
@@ -188,7 +185,6 @@ int main ()
         else
             cout<<"\n\nBusca Finalizada!\n";
     }while(cod != 1);
-
-
+    
     return 0;
 }

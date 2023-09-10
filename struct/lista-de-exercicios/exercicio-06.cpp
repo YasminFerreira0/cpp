@@ -1,11 +1,9 @@
-/*Dados os seguintes campos de um registro: nome, dia de anivers·rio e mÍs de
-anivers·rio, faÁa um programa que mostre em cada um dos meses do ano quem s„o as
-pessoas que fazem anivers·rio, exibir tambÈm o dia. Considere um conjunto de 40
-pessoas.*/
+/*Dados os seguintes campos de um registro: nome, dia de anivers√°rio e m√™s de anivers√°rio, fa√ßa um programa que mostre em cada um dos meses do ano quem s√£o as pessoas que fazem anivers√°rio, exibir tamb√©m o dia. Considere um conjunto de 40 pessoas.*/
 
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
+
 using namespace std;
 
 struct Aniversario{
@@ -14,10 +12,10 @@ struct Aniversario{
 
 int main ()
 {
-    Aniversario A[40];
+    Aniversario A[40]; 
     int i, j;
 
-    cout<<"\nCadastre os dados de "<<TAM<<" pessoas\n";
+    cout<<"\nCadastre os dados de "<<40<<" pessoas\n";
     for(i = 0; i < 40; i++)
     {
         cout<<"\n\nInforme o nome: ";
@@ -36,7 +34,8 @@ int main ()
         cout<<"\nPessoas que fazem aniversario no mes: "<<j<<endl;
         for(i = 0; i < 40; i++)
         {
-            if(A[i].mes == j){
+            if(A[i].mes == j)
+            {
                 cout<<"\nNome: "<<A[i].nome;
                 cout<<"\ndia: "<<A[i].dia<<endl<<endl;
             }

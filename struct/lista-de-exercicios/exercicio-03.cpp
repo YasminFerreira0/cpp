@@ -1,21 +1,17 @@
-/*Faça um programa para cadastrar até 20 produtos de uma loja com os seguintes dados:
-código, descrição, estoque mínimo, estoque atual e preço. Mostrar todos os dados dos
-produtos que contenham o estoque atual menor que o estoque mínimo para efetuar
+/*Faï¿½a um programa para cadastrar atï¿½ 20 produtos de uma loja com os seguintes dados:
+cï¿½digo, descriï¿½ï¿½o, estoque mï¿½nimo, estoque atual e preï¿½o. Mostrar todos os dados dos
+produtos que contenham o estoque atual menor que o estoque mï¿½nimo para efetuar
 compra.*/
 
 #include <iostream>
-#include <cstring>
-
 #include <stdio.h>
 #include <string.h>
 
 using namespace std;
 
 struct cadastro {
-    int codigo;
+    int codigo, est_min, est_atual;
     char descricao[30];
-    int est_min;
-    int est_atual;
     float preco;
 };
 

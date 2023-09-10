@@ -1,81 +1,77 @@
-/*FaÁa um programa para cadastrar o hor·rio de partida dos 10 voos di·rios de uma certa
-companhia, com os dados: cÛdigo, hor·rio de partida, quantidade de passageiros, valor
-da passagem, origem e destino. Solicitar ao usu·rio a origem e mostrar todos os dados
-dos voos que possuem esta origem. Mostrar, tambÈm, todos os voos que possuem
-hor·rio de partida pela manh„.*/
+/*Fa√ßa um programa para cadastrar o hor√°rio de partida dos 10 voos di√°rios de uma certa companhia, com os dados: c√≥digo, hor√°rio de partida, quantidade de passageiros, valor da passagem, origem e destino. Solicitar ao usu√°rio a origem e mostrar todos os dados dos voos que possuem esta origem. Mostrar, tamb√©m, todos os voos que possuem hor√°rio de partida pela manh√£.*/
 
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
+
 using namespace std;
 
-struct Voos{
+struct dados{
     int codigo, hp, mp, qp;
     float valor;
     char origem[30], destino[30]; };
 
 int main ()
 {
-    Voos V[10];
+    dados voos[10];
     int i;
     char orig[30];
 
     cout<<"\nCadastre os "<<10<<" voos\n";
-    for(i = 0; i < TAM; i++)
+    for(i = 0; i < 10; i++)
     {
         cout<<"\n\nInforme o codigo: ";
-        cin>>V[i].codigo;
+        cin>>voos[i].codigo;
 
         cout<<"\nInforme as horas da partida: ";
-        cin>>V[i].hp;
+        cin>>voos[i].hp;
 
         cout<<"\nInforme os minutos da partida: ";
-        cin>>V[i].mp;
+        cin>>voos[i].mp;
 
         cout<<"\nInforme a quantidade de passageiros: ";
-        cin>>V[i].qp;
+        cin>>voos[i].qp;
 
         cout<<"\nInforme a origem: ";
         fflush(stdin);
-        gets(V[i].origem);
+        gets(voos[i].origem);
 
         cout<<"\nInforme o destino: ";
         fflush(stdin);
-        gets(V[i].destino);
+        gets(voos[i].destino);
 
         cout<<"\nInforme o valor da passagem: ";
-        cin>>V[i].valor;
+        cin>>voos[i].valor;
      }
 
      cout<<"\nInforme a origem dos voos da serem buscados: ";
      fflush(stdin);
      gets(orig);
 
-
     cout<<"\nRegistros dos voos encontrados a partim da origem informada\n";
     for(i = 0; i < 10; i++)
     {
-        if(strcmpi(V[i].origem, orig) == 0)
+        if(strcmpi(voos[i].origem, orig) == 0)
         {
-            cout<<"\nCodigo: "<<V[i].codigo;
-            cout<<"\nHorario de partida: "<<V[i].hp<<"h"<<V[i].mp<<"min";
-            cout<<"\nQuantidade de passageiros "<<V[i].qp;
-            cout<<"\nDestino: "<<V[i].destino;
-            cout<<"\nValor: "<<V[i].valor<<endl<<endl;
+            cout<<"\nCodigo: "<<voos[i].codigo;
+            cout<<"\nHorario de partida: "<<voos[i].hp<<"h"<<voos[i].mp<<"min";
+            cout<<"\nQuantidade de passageiros "<<voos[i].qp;
+            cout<<"\nDestino: "<<voos[i].destino;
+            cout<<"\nValor: "<<voos[i].valor<<endl<<endl;
         }
     }
 
     cout<<"\nRegistros dos voos que partem pela manha\n";
     for(i = 0; i < 10; i++)
     {
-        if(V[i].hp < 12)
+        if(voos[i].hp < 12)
         {
-            cout<<"\nCodigo: "<<V[i].codigo;
-            cout<<"\nHorario de partida: "<<V[i].hp<<"h"<<V[i].mp<<"min";
-            cout<<"\nQuantidade de passageiros "<<V[i].qp;
-            cout<<"\nOrigem: "<<V[i].origem;
-            cout<<"\nDestino: "<<V[i].destino;
-            cout<<"\nValor: "<<V[i].valor<<endl<<endl;
+            cout<<"\nCodigo: "<<voos[i].codigo;
+            cout<<"\nHorario de partida: "<<voos[i].hp<<"h"<<voos[i].mp<<"min";
+            cout<<"\nQuantidade de passageiros "<<voos[i].qp;
+            cout<<"\nOrigem: "<<voos[i].origem;
+            cout<<"\nDestino: "<<voos[i].destino;
+            cout<<"\nValor: "<<voos[i].valor<<endl<<endl;
         }
     }
 
