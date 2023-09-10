@@ -3,6 +3,7 @@
 #include <string.h>
 using namespace std;
 
+//Definição da estrutura
 struct Aluno{
     int matricula;
     char tipo, socio;
