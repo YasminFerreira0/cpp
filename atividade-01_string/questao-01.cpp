@@ -20,6 +20,9 @@ int main()
     for(i=0, j = strlen(palavra)-1; i<strlen(palavra); i++, j--){
         palavra_inv[j] = palavra[i];
     }
+    
+    //Colocando o caracter delimitador na string invertida
+    palavra_inv[strlen(palavra)] = '\0';
 
     if(strcmp(palavra,palavra_inv) == 0){
         cout<<"A palavra e um palindromo.";
