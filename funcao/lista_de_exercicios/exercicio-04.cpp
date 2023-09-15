@@ -10,16 +10,26 @@ using namespace std;
 void horario(int h, int m, int s){
     int segundos;
 
-    segundos = }(h * 3600) + (m * 60) + s;
+    segundos = (h * 3600) + (m * 60) + s;
 
     cout<<"O horario em sungundos e: "<<segundos;
 
 }
 
 int main (){
-    int h, m s;
+    int h, m, s;
 
     cout<<"Informe as horas: ";
     cin>>h;
+
+    cout<<"Informe os minutos: ";
+    cin>>m;
+
+    cout<<"Informe os segundos: ";
+    cin>>s;
+
+    horario(h, m, s);
+
+    return 0;
 
 }
