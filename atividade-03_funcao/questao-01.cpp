@@ -1,6 +1,6 @@
 /*Faca um programa que contenha uma funcao, onde passado por parametro um valor inteiro
 representando uma distancia em quilometros, realiza a conversao para milhas e mostra na tela o
-resultado. Observação: 1 quilometro equivale a aproximadamente 0,62 milhas.*/
+resultado. Observacao: 1 quilometro equivale a aproximadamente 0,62 milhas.*/
 
 #include <iostream>
 using namespace std;

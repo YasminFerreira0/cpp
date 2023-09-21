@@ -1,4 +1,4 @@
-/*Faca um programa contendo uma funcao para receber por parametro o salario e o tempo de serviço
+/*Faca um programa contendo uma funcao para receber por parametro o salario e o tempo de servico
 de um funcionario e promover um reajuste salarial. A funcao devera reajustar o salario de acordo
 com o tempo de servico do funcionario. Se o funcionario possui tempo de servico inferior a 10
 anos, o reajuste sera de 10%, caso contrario, o reajuste sera de 15%. Ao final, a funcao devera

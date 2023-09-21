@@ -7,6 +7,8 @@ using namespace std;
 void soma (int n1, int n2){
     int s, i, menor, maior;
 
+    s = 0;
+
     if(n1>n2){
         maior = n1;
         menor = n2;

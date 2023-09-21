@@ -1,5 +1,5 @@
 /*Capicuas sao numeros que tem o mesmo valor, se lido da esquerda para direita ou da direita para a
-esquerda. Ex.: 44, 22, 66, etc. Faça um programa contendo uma funcao que recebe por parametro
+esquerda. Ex.: 44, 22, 66, etc. Faca um programa contendo uma funcao que recebe por parametro
 um numero inteiro de dois digitos e que verifica e mostra se o numero e capicua ou nao.*/
 
 #include <iostream>
