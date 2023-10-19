@@ -5,46 +5,37 @@ devem ser apresentados na função principal do programa.*/
 #include <iostream>
 using namespace std;
 
-int encontrarMaiorMenor(int n1, int n2, int n3, int n4, int n5) {
-    int maior, menor;
-    
-    maior = menor = n1;
-
-    if (n2 > maior) {
-        maior = n2;
-    } else if (n2 < menor) {
-        menor = n2;
-    }
-
-    if (n3 > maior) {
-        maior = n3;
-    } else if (n3 < menor) {
-        menor = n3;
-    }
-
-    if (n4 > maior) {
-        maior = n4;
-    } else if (n4 < menor) {
-        menor = n4;
-    }
-
-    if (n5 > maior) {
-        maior = n5;
-    } else if (n5 < menor) {     
-        menor = n5;
-    }
-}
+int maior_menor(int vet[], int &maior, int &menor);
 
 int main() {
-    int n1, n2, n3, n4, n5;
+    int V[5], maior, menor, i;
 
-    cout<<"Digite cinco números inteiros: ";
-    cin>>n1>>n2>>n3>>n4>>n5;
+    cout<<"\nInforme cinco valores inteiros ";
+    for(i = 0; i < 5; i++){
+        cin>>V[i];
+    }
 
-    encontrarMaiorMenor(n1, n2, n3, n4, n5);
+    maior_menor(V, maior, menor);
 
-    cout << "O maior valor é: " << maior << endl;
-    cout << "O menor valor é: " << menor << endl;
+    cout<<"\nMaior valor: "<<maior<<endl;
+    cout<<"\nMenor valor: "<<menor<<endl;
 
     return 0;
+}
+
+int maior_menor(int V[], int &maior, int &menor){
+    int i;
+
+    maior = V[0];
+    menor = V[0];
+
+    for(i = 1; i < 5; i++)
+    {
+        if(maior < V[i]){
+            maior = V[i];
+        }else{
+            if(menor > V[i])
+                menor = V[i];
+        }
+    }
 }
