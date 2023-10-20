@@ -8,7 +8,7 @@ principal.*/
 
 using namespace std;
 
-float fat(int vetA[], float vetB[]);
+void fat(int vetA[], float vetB[]);
 
 int main(){
     int vA[10], i;
@@ -21,8 +21,24 @@ int main(){
 
     fat(vA, vB);
 
-    cout<<"Fatorial de cada numero: "
-    for(){}
+    cout<<"Fatorial de cada numero: ";
+    for(i=1; i<10; i++){
+        cout<<vB[i]<<" ";
+    }
 
+    cout<<endl;
+    return 0;
+}
+
+void fat (int vetA[], float vetB[]){
+    int i, j, fat;
+
+        for(i = 0; i < 10; i++){
+            fat = 1;
+            for(j = 2; j <= vetA[i]; j++){
+                fat *= j;
+            }
+            vetB[i] = fat;
+        }
 
 }
