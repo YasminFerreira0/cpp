@@ -7,7 +7,7 @@ Lembrando que 1 quilômetro equivale a aproximadamente 0,62 milhas.*/
 
 using namespace std;
 
-float conversao(float km, float milha);
+float conversao(float km, float &milha);
 
 int main(){
     float km, m;
@@ -22,7 +22,8 @@ int main(){
     return 0;
 }
 
-float conversao(float km, float milha){
+float conversao(float km, float &milha){
+    milha = 0;
     milha = km * 0,62;
 }
 
