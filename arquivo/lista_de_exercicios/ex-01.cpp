@@ -8,7 +8,17 @@ preço dos produtos com mais de 100 unidades em estoque.*/
 
 using namespace std;
 
+struct produtos{
+    int codigo, q_estoque;
+    char descr[50];
+    float preco;
+};
+
 int main(){
 
+    produtos P[];
+
+    FILE *p;
+    p = fopen("produtos.txt", r);
 
 }
