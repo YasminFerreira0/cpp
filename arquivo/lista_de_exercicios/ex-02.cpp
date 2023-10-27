@@ -1,9 +1,12 @@
-/*Uma loja de revenda de automóveis mantém, em um arquivo, os dados dos veículos que estão
-disponíveis à venda, tais como: modelo, fabricante, cor, ano, placa e valor. Para auxiliar os
-vendedores da loja, faça um programa para ler, do usuário, o modelo de um veículo desejado
-e apresentar a cor, o ano e o valor dos veículos equivalentes que estão cadastrados no arquivo.*/
+/*Uma loja de revenda de automï¿½veis mantï¿½m, em um arquivo, os dados dos veï¿½culos que estï¿½o
+disponï¿½veis ï¿½ venda, tais como: modelo, fabricante, cor, ano, placa e valor. Para auxiliar os
+vendedores da loja, faï¿½a um programa para ler, do usuï¿½rio, o modelo de um veï¿½culo desejado
+e apresentar a cor, o ano e o valor dos veï¿½culos equivalentes que estï¿½o cadastrados no arquivo.*/
 
 #include <iostream>
+#include <cstdio>
+#include <cstring>
+
 #include <string.h>
 
 using namespace std;
@@ -15,17 +18,15 @@ int main(){
     char m_des[20];
     int i, j;
 
-    arquilo = fopen("veiculos.txt", r);
+    arquivo = fopen("ex-02_veiculos.txt", "r");
 
-    cout<<"Informe o modelo de um veiculo desejado";
-    for(i=0;i<strlen(m_des);i++){
-        gets(m_des[i]);
-    }
+    cout<<"Informe o modelo de um veiculo desejado: ";
+    gets(m_des);
 
     while(fgets(veiculos, 50, arquivo)!=NULL){
         i=j=0;
 
-        while(veiculo[i] != ' ') modelo[j++] = veiculo[i++];
+        while(veiculos[i] != ' ') modelo[j++] = veiculos[i++];
 
         modelo[j] = '\0';
 
@@ -33,7 +34,7 @@ int main(){
 
         j = 0;
 
-        while(veiculo[i] != ' ') fab[j++] = veiculo[i++];
+        while(veiculos[i] != ' ') fab[j++] = veiculos[i++];
 
         fab[j] = '\0';
 
@@ -41,7 +42,7 @@ int main(){
 
         j = 0;
 
-        while(veiculo[i] != ' ') cor[j++] = veiculo[i++];
+        while(veiculos[i] != ' ') cor[j++] = veiculos[i++];
 
         cor[j] = '\0';
 
@@ -49,7 +50,7 @@ int main(){
 
         j = 0;
 
-        while(veiculo[i] != ' ') ano[j++] = veiculo[i++];
+        while(veiculos[i] != ' ') ano[j++] = veiculos[i++];
 
         ano[j] = '\0';
 
@@ -57,7 +58,7 @@ int main(){
 
         j = 0;
 
-         while(veiculo[i] != ' ') placa[j++] = veiculo[i++];
+         while(veiculos[i] != ' ') placa[j++] = veiculos[i++];
 
         placa[j] = '\0';
 
@@ -65,16 +66,15 @@ int main(){
 
         j = 0;
 
-        while(veiculo[i] != '\n') valor[j++] = veiculo[i++];
+        while(veiculos[i] != '\n') valor[j++] = veiculos[i++];
 
         valor[j] = '\0';
 
         if (strcmpi(m_des, modelo)==0){
             cout<<"\n"<<cor<<" "<<ano<<" "<<valor;
-
         }
-
-
     }
-
+    cout<<endl;
+    //Fechando o arquivo
+    fclose(arquivo);
 }
