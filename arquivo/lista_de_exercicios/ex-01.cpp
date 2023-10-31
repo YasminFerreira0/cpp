@@ -1,3 +1,8 @@
+/*Faca um programa para ler, em um arquivo, as informacoes referentes aos produtos de uma
+loja de informatica cadastrados com os seguintes dados: codigo, descricao, quantidade em
+estoque e preco da unidade. A seguir, o programa devera apresentar o codigo, a descricao e o
+preco dos produtos com mais de 100 unidades em estoque.*/
+
 #include <stdio.h>
 #include <iostream>
 #include <stdlib.h>

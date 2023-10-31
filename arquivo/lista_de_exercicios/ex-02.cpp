@@ -1,7 +1,7 @@
-/*Uma loja de revenda de autom�veis mant�m, em um arquivo, os dados dos ve�culos que est�o
-dispon�veis � venda, tais como: modelo, fabricante, cor, ano, placa e valor. Para auxiliar os
-vendedores da loja, fa�a um programa para ler, do usu�rio, o modelo de um ve�culo desejado
-e apresentar a cor, o ano e o valor dos ve�culos equivalentes que est�o cadastrados no arquivo.*/
+/*Uma loja de revenda de automoveis mantam, em um arquivo, os dados dos veiculos que estao
+disponiveis a venda, tais como: modelo, fabricante, cor, ano, placa e valor. Para auxiliar os
+vendedores da loja, faca um programa para ler, do usuario, o modelo de um veiculo desejado
+e apresentar a cor, o ano e o valor dos veiculos equivalentes que estao cadastrados no arquivo.*/
 
 #include <iostream>
 #include <cstdio>
