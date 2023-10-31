@@ -43,5 +43,6 @@ int main(){
     fclose(arquivoL);
     fclose(arquivoW);
 
+    cout << "Concluido!" << endl;
     return 0;
 }
