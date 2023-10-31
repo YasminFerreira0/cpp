@@ -1,24 +1,55 @@
-/*Faça um programa para ler, em um arquivo, as informações referentes aos produtos de uma
-loja de informática cadastrados com os seguintes dados: código, descrição, quantidade em
-estoque e preço da unidade. A seguir, o programa deverá apresentar o código, a descrição e o
-preço dos produtos com mais de 100 unidades em estoque.*/
-
-#include <iostream>
 #include <stdio.h>
-
+#include <iostream>
+#include <stdlib.h>
 using namespace std;
 
-struct produtos{
-    int codigo, q_estoque;
-    char descr[50];
-    float preco;
-};
+main( )
+{
+    FILE *arquivo;
+    char registro[50], cod[10], descr[20], estoq[10], preco[10];
+    int i, j, qtde;
 
-int main(){
+    arquivo = fopen("produtos.txt", "r");
 
-    produtos P[];
+    cout<<"\nProdutos com mais de 100 unidades em estoque: "<<endl;
 
-    FILE *p;
-    p = fopen("produtos.txt", r);
+    while(fgets(registro, 50, arquivo) != NULL){
 
+        i = j = 0;
+
+        while(registro[i] != ' ') cod[j++] = registro[i++];
+
+        cod[j] = '\0';
+
+        i++;
+
+        j = 0;
+
+        while(!isdigit(registro[i])) descr[j++] = registro[i++];
+
+        descr[j-1] = '\0';
+
+        j = 0;
+
+        while(registro[i] != ' ') estoq[j++] = registro[i++];
+
+        estoq[j] = '\0';
+
+        i++;
+
+        j = 0;
+
+        while(registro[i] != '\n') preco[j++] = registro[i++];
+
+
+        preco[j] = '\0';
+
+        qtde = atoi(estoq);
+
+        if(qtde > 100)
+            cout<<"\n"<<cod<<" "<<descr<<" "<<"R$:"<<preco;
+    }
+
+    cout<<endl;
+    fclose(arquivo);
 }

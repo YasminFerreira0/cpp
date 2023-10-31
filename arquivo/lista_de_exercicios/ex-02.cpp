@@ -75,6 +75,5 @@ int main(){
         }
     }
     cout<<endl;
-    //Fechando o arquivo
     fclose(arquivo);
 }
