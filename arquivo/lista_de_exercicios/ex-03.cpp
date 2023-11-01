@@ -5,16 +5,18 @@ programa para ler os dados do censo e escrever, em outro arquivo, os dados dos h
 com nivel superior completo.*/
 
 #include <iostream>
-#include <string.h>
+#include <string.h>]
+
+#include <stdlib.h>
 #include <stdio.h>
 
 using namespace std;
 
 int main(){
-    FILE *arquivoL;
-    FILE *arquivoW;
+    FILE *arquivoL, *arquivoW;
+    int i, j;
 
-    char habitantes[50], nome[20], nvEscolar[20], cpf[10], rg[10], idade[5];
+    char habitantes[50], nome[20], cpf[10], rg[10], idade[5], nvEscolar[20];
 
     arquivoL = fopen("ex_03_habitantes-leitura.txt", "r");
 
@@ -28,17 +30,46 @@ int main(){
     }
 
     while(fgets(habitantes, 50, arquivoL)!=NULL){
+        i=j=0;
+        while(habitantes[i] != ' ') nome[j++] = habitantes[i++];
+
+        nome[j] = '\0';
+        i++;
+        j = 0;
+
+        while(habitantes[i] != ' ') cpf[j++] = habitantes[i++];
+
+        cpf[j] = '\0';
+        i++;
+        j = 0;
+
+        while(habitantes[i] != ' ') rg[j++] = habitantes[i++];
+
+        rg[j] = '\0';
+        i++;
+        j = 0;
+
+        while(habitantes[i] != ' ') idade[j++] = habitantes[i++];
+
+        idade[j] = '\0';
+        i++;
+        j = 0;
+
+        while(habitantes[i] != ' ') nvEscolar[j++] = habitantes[i++];
+
+        nvEscolar[j] = '\0';
+
 
         if(strcmpi(nvEscolar, "superior") == 0){
             fputs(habitantes, arquivoW);
             if (ferror(arquivoW)){
-                cout << "\nErro de gravacao!"; 
+                cout << "\nErro de gravacao!";
             }else{
-                cout << "\nGravacao com sucesso!"; 
+               cout << "\nGravacao com sucesso!";
             }
         }
     }
-    
+
     cout<<endl;
     fclose(arquivoL);
     fclose(arquivoW);
