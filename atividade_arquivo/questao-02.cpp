@@ -1,6 +1,6 @@
-/*Fa�a um programa que leia registros de um arquivo de estudantes. Cada estudante possui
-um n�mero de identidade, seu nome e sua idade. O programa deve apresentar na tela o
-n�mero de estudantes lidos, o nome e a idade do estudante mais velho.*/
+/*Faca um programa que leia registros de um arquivo de estudantes. Cada estudante possui
+um numero de identidade, seu nome e sua idade. O programa deve apresentar na tela o
+numero de estudantes lidos, o nome e a idade do estudante mais velho.*/
 
 #include <iostream>
 #include <string.h>
@@ -15,6 +15,11 @@ int main(){
 
 
     arquivo = fopen("questao-02.txt", "r");
+    
+    if (arquivo == NULL) {
+        cerr << "Erro ao abrir o arquivo." << endl;
+        return 1;
+    }
 
     cout<<"Registros de Estudantes"<<endl<<endl;
 
@@ -37,8 +42,5 @@ int main(){
     }
     cout<<endl;
     fclose(arquivo);
-
-
-
 
 }

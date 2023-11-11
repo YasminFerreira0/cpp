@@ -1,6 +1,6 @@
-/*Fa�a um programa que leia os dados de uma pessoa, informados pelo usu�rio, e salve-os
-em um arquivo. Os dados da pessoa s�o: nome, cpf, data de nascimento e endere�o. A
-cada registro informado, o programa deve perguntar ao usu�rio se deseja ler um novo
+/*Faca um programa que leia os dados de uma pessoa, informados pelo usuario, e salve-os
+em um arquivo. Os dados da pessoa sao: nome, cpf, data de nascimento e endereco. A
+cada registro informado, o programa deve perguntar ao usuario se deseja ler um novo
 registro e gravar no arquivo.*/
 
 #include <stdio.h>
@@ -18,7 +18,12 @@ int main(){
 
     arquivo = fopen("questao-01.txt", "w");
 
-    cout<<"Informe os Registros"<<endl;
+    if (arquivo == NULL) {
+        cerr << "Erro ao abrir o arquivo." << endl;
+        
+    }
+
+    cout<<endl<<"Informe os Registros"<<endl<<endl;
 
     do{
         cout<<"Informe os dados."<<endl;
@@ -41,10 +46,9 @@ int main(){
 
         fprintf(arquivo, "%s %s %s %s \n", nome, cpf, d_nasc, ender);
 
-
         cout<<endl;
 
-        cout<<"Deseja realizar outro registro? (0-sim; 1-nao)";
+        cout<<"Deseja realizar outro registro? (0-sim; 1-nao): ";
         cin>>n_reg;
 
     }while(n_reg !=1);
