@@ -11,8 +11,7 @@ int main(){
     FILE *arquivo;
 
     char registro[60], id[20], nome[30], idade[10];
-    int i, j;
-
+    int i, j, cont=0, maiorIdade;
 
     arquivo = fopen("questao-02.txt", "r");
     
@@ -20,9 +19,6 @@ int main(){
         cerr << "Erro ao abrir o arquivo." << endl;
         return 1;
     }
-
-    cout<<"Registros de Estudantes"<<endl<<endl;
-
     while(fgets(registro, 60, arquivo) != NULL){
             i=j=0;
 
@@ -38,9 +34,19 @@ int main(){
             while(registro[i] != '\n') idade[j++] = registro[i++];
             idade[j]= '\0';
 
-            cout<<"ID: "<<id<<"     Nome: "<<nome<<"    Idade: "<<idade<<endl;
+            cont++;
+
+            maiorIdade = atoi(idade);
+
+            if(maiorIdade > atoi(idade)){
+                maiorIdade = atoi(idade);
+                cout<<"ID: "<<id<<"     Nome: "<<nome<<"    Idade: "<<idade<<endl;
+            }
     }
+    
+    cout << "Numero de estudantes lidos: " << cont << endl;
+    cout << "Estudante mais velho: Idade " << maiorIdade << endl;
+
     cout<<endl;
     fclose(arquivo);
-
 }

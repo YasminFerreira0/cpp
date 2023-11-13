@@ -13,7 +13,7 @@ using namespace std;
 int main(){
     FILE *arquivo;
 
-    char registro[100], nome[30], cpf[10], d_nasc[10], ender[50];
+    char registro[150], nome[40], cpf[30], d_nasc[20], ender[100];
     int n_reg=0;
 
     arquivo = fopen("questao-01.txt", "w");
