@@ -9,6 +9,8 @@ int main() {
 
     char registro[60], id[20], nome[30], idade[10];
     int i, j, cont = 0, maiorIdade = 0;
+    
+    char nomeMaisVelho[30], idMaisVelho[20];
 
     arquivo = fopen("questao-02.txt", "r");
 
@@ -36,6 +38,8 @@ int main() {
 
         if (idadeAtual > maiorIdade) {
             maiorIdade = idadeAtual;
+            strcpy(nomeMaisVelho, nome);
+            strcpy(idMaisVelho, id);
         }
 
         cont++;
@@ -44,7 +48,7 @@ int main() {
     fclose(arquivo);
 
     cout << "Numero de estudantes lidos: " << cont << endl;
-    cout << "Estudante mais velho: Idade " << maiorIdade << endl;
+    cout << "Estudante mais velho: Idade " << maiorIdade << ", Nome: " << nomeMaisVelho << ", ID: " << idMaisVelho <<endl;
 
     return 0;
 }
