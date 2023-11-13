@@ -2,8 +2,10 @@
 um numero de identidade, seu nome e sua idade. O programa deve apresentar na tela o
 numero de estudantes lidos, o nome e a idade do estudante mais velho.*/
 
+#include <stdio.h>
 #include <iostream>
 #include <string.h>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -38,14 +40,15 @@ int main(){
 
             maiorIdade = atoi(idade);
 
-            if(maiorIdade > atoi(idade)){
+
+            if(maiorIdade < atoi(idade)){
                 maiorIdade = atoi(idade);
                 cout<<"ID: "<<id<<"     Nome: "<<nome<<"    Idade: "<<idade<<endl;
             }
     }
     
-    cout << "Numero de estudantes lidos: " << cont << endl;
-    cout << "Estudante mais velho: Idade " << maiorIdade << endl;
+    cout<<"Numero de estudantes lidos: " <<cont<<endl;
+    cout<<"Estudante mais velho: Idade " <<maiorIdade<<endl;
 
     cout<<endl;
     fclose(arquivo);
