@@ -19,7 +19,7 @@ int main(){
     arquivo = fopen("questao-01.txt", "w");
 
     if (arquivo == NULL) {
-        cerr << "Erro ao abrir o arquivo." << endl;
+        cout<<"Erro ao abrir o arquivo."<<endl;
         
     }
 
@@ -54,5 +54,4 @@ int main(){
     }while(n_reg !=1);
 
     fclose(arquivo);
-
 }
