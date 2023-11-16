@@ -1,4 +1,4 @@
-/*Faca um programa contendo uma funcao para receber, por parâmetro, tres valores
+/*Faca um programa contendo uma funcao para receber, por parametro, tres valores
 inteiros informados no modulo principal. A funcao devera entao determinar e mostrar o
 menor valor dos tres valores informados.*/
 

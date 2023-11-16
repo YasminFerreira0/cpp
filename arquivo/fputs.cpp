@@ -13,6 +13,7 @@ int main (){
         cout << "Erro na abertura!" << endl;
     }else{
         cout << "\nDigite uma cadeia de caracteres: ";
+        fflush(stdin);
         gets (cadeia);
         while (stricmp(cadeia, "fim")!= 0){//compara duas cadeias
             fputs(cadeia, p);
