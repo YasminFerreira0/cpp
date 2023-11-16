@@ -5,7 +5,7 @@ programa para ler os dados do censo e escrever, em outro arquivo, os dados dos h
 com nivel superior completo.*/
 
 #include <iostream>
-#include <string.h>]
+#include <string.h>
 
 #include <stdlib.h>
 #include <stdio.h>

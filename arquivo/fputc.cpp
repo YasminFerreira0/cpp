@@ -1,4 +1,4 @@
-s#include <iostream>
+#include <iostream>
 #include <stdio.h>
 
 using namespace std;
@@ -9,7 +9,7 @@ int main (){
 
     FILE *p;
     char carac;
-    p = fopen ("exemplo.txt","a");
+    p = fopen ("fputc.txt","a");
     if (p == NULL)
         cout << "Erro na abertura!" << endl;
     else{
@@ -19,9 +19,8 @@ int main (){
         while (carac != '0'){
             fputc(carac, p);
             if (ferror(p))
-                cout << "\nErro na gravação!";
+                cout << "\nErro na gravaï¿½ï¿½o!";
             else{
-
                 cout << "\nDigite outro caractere: ";
                 cin >> carac;
             }
@@ -29,5 +28,4 @@ int main (){
     }
     fclose(p);
     return 0;
-
 }

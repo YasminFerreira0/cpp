@@ -10,13 +10,11 @@ int main ()
 
     FILE *p;
     p = fopen ("exemplo.txt","r");
-    if (p == NULL)
-
-    cout << "Erro na abertura!" << endl;
-
-    else
-
-    cout << "\nArquivo Aberto com Sucesso!\n";
+    if (p == NULL){
+        cout << "Erro na abertura!" << endl;
+    }else{
+        cout << "\nArquivo Aberto com Sucesso!\n"; 
+    }
 
     fclose(p);
     return 0;

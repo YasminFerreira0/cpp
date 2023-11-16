@@ -5,21 +5,21 @@ using namespace std;
 
 int main (){
 
-    /*a função fopen() cria um
-arquivo chamado exemplo.txt, onde poderão
-ser realizadas operações de escrita (gravação),
-pois foi utilizado o modo de abertura “w”.*/
+    /*a funcao fopen() cria um
+arquivo chamado exemplo.txt, onde poderao
+ser realizadas operacoes de escrita (gravacoo),
+pois foi utilizado o modo de abertura ï¿½wï¿½.*/
 
     FILE *p;
+    
     p = fopen ("exemplo.txt","w");
-    if (p == NULL)
 
-    cout << "Erro na abertura do arquivo. Fim de programa!";
+    if (p == NULL){
+        cout << "Erro na abertura do arquivo!";
+    }else{
+        cout << "\nArquivo Criado com Sucesso!\n";
+    }
 
-    else
-
-    cout << "\nArquivo Criado com Sucesso!\n";
 
     return 0;
-
 }
