@@ -111,6 +111,10 @@ int main(){
                     fclose(arq);
                 }
                 break;
+
+                case 4: 
+                    cout<<"Programa Encerado!"<<endl<<endl;
+                break;
         }
     }while(opc != 4);
 
